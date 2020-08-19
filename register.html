@@ -1,0 +1,62 @@
+<!Doctype html>
+<html>
+<head>
+<title>Registeration Form</title>
+<link rel="stylesheet" href="css.css"/>
+</head>
+<script>
+	function formvalidate() {
+  var x = document.forms["form1"]["uname"].value;
+  if (x == "") {
+    alert("Username must be filled out.This is form validation ");
+    return false;
+  }
+  if (/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(form1.email.value))
+  {
+    return true;
+  }
+    alert("You have entered an invalid email address!")
+    return false;
+}
+</script>
+<body>
+<ul>
+ <li><a href="irctc.html">HOME</a></li>
+ <li><a href="#home">AIR-TICKETS</a></li>
+ <li><a href="login.html">LOG-IN</a></li>
+ <li><a href="#about">HOLIDAYS</a></li>
+ <li><a href="#about">STAYS</a></li>
+ <li><a href="#about">CONTACT US</a></li>
+ <li><a href="#about">AIRPORT-WiFi </a></li>
+ <li><a href="#news">COVID NEWS</a></li>
+ </ul>
+<fieldset style="background-color: #e4e4e4; width: 90% ; margin-top: 20px;margin-left: 60px; display: inline;">
+ <h1 style="text-align:center; color:#17223b;">REGISTRATION FORM</h1>
+ <img src="plane.gif" width="400" height="250" style="margin-left: 400px;">
+ <form style="background-color:#e4e4e4; text-align:center;" action="/action_page.php" name="form1" onsubmit="return formvalidate()" method="post">
+    <input type="text" id="from" name="uname" placeholder="Username" >
+    <input type="password" id="pass" name="To" placeholder="Password"><br>
+	<input type="password" id="lname1" name="To1" placeholder="Confirm-Password"><br>
+	<select id="class" name="class">
+      <option value="none">Preferred Language</option>    
+      <option value="ac-3">English</option>
+      <option value="ac-2">Hindi</option>
+    </select><br>
+	<hr>
+		<input type="text" id="fname" name="fname" placeholder="First Name">
+		<input type="text" id="mname" name="mname" placeholder="Middle Name">
+		<input type="text" id="lname" name="lname" placeholder="Last Name"></br>
+		
+	<input type="date" id="doj1" name="doj">
+	
+	
+	<input type="email" name="email" placeholder="Email"><br></hr>
+	<hr>
+	<input type="submit" value="Register">
+	<input type="reset" onclick="myfunction1()" value="Reset">
+	</hr>
+ </form>
+</fieldset> 
+</body>
+
+</html>
